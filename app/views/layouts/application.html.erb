@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="header">
+  <h1 class="header_title">RailsBlog</h1>
+  <nav>
+    <ul class="header_nav">
+      <li class="header_nav"><%= link_to 'Home', entries_path %></li>
+      <li class="header_nav"><%= link_to 'New Blog Post', new_entry_path %></li>
+    </ul>
+  </nav>
+</div>
+<div class="container">
+  <%= yield %>
+</div>
 </body>
 </html>
