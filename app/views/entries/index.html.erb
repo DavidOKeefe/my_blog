@@ -1,0 +1,11 @@
+<h1> Blog Entries </h1>
+
+<div class="center">
+  <% @entries.each do |entry| %>
+    <h3><%= link_to entry.title, entry %></h3>
+    <p><%= entry.description %></p>
+    <%= link_to 'Edit', edit_entry_path(entry) %>
+    <%= link_to 'Destroy', entry, method: :delete %>
+    <br>
+  <% end %>
+</div>
